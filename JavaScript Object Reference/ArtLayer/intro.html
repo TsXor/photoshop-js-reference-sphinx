@@ -1,0 +1,1900 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>ArtLayer &#8212; Photoshop js reference  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ArtLayers" href="../ArtLayers/intro.html" />
+    <link rel="prev" title="Application" href="../Application/intro.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../ArtLayers/intro.html" title="ArtLayers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../Application/intro.html" title="Application"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ArtLayer</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="artlayer">
+<h1>ArtLayer<a class="headerlink" href="#artlayer" title="Permalink to this heading">¶</a></h1>
+<p>An object within a document that contains the visual elements of the image (equivalent to a layer in the Adobe Photoshop application).</p>
+<p>Access an art layer in a document through the Document.artLayers collection. You can access a layer by name; for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">layerRef</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">activeDocument</span><span class="o">.</span><span class="n">artLayers</span><span class="o">.</span><span class="n">getByName</span><span class="p">(</span><span class="s2">&quot;my layer&quot;</span><span class="p">);</span>
+<span class="n">layerRef</span><span class="o">.</span><span class="n">allLocked</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Access the art layers in a layer set through the LayerSet.artLayers collection in the parent set.</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="allLocked">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">allLocked</span></span><a class="headerlink" href="#allLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to completely lock the contents and settings of this layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="blendMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">blendMode</span></span><a class="headerlink" href="#blendMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The blending mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BlendMode</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bounds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bounds</span></span><a class="headerlink" href="#bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of coordinates that describes the bounding rectangle of the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="boundsNoEffects">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">boundsNoEffects</span></span><a class="headerlink" href="#boundsNoEffects" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array of coordinates that describes the bounding rectangle of the layer not including effects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fillOpacity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fillOpacity</span></span><a class="headerlink" href="#fillOpacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The interior opacity of the layer, a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span> <span class="pre">[0.0..100]</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="filterMaskDensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filterMaskDensity</span></span><a class="headerlink" href="#filterMaskDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The density of the filter mask (between 0.0 and 250.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="filterMaskFeather">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filterMaskFeather</span></span><a class="headerlink" href="#filterMaskFeather" title="Permalink to this definition">¶</a></dt>
+<dd><p>The feather of the filter mask (between 0.0 and 250.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="grouped">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">grouped</span></span><a class="headerlink" href="#grouped" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this layer is grouped with the layer beneath it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="isBackgroundLayer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">isBackgroundLayer</span></span><a class="headerlink" href="#isBackgroundLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if this is the background layer of the document. A document can have only one background layer. If there is no background layer, setting this to true causes this to become the background layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="kind">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">kind</span></span><a class="headerlink" href="#kind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the type (such as ‘text layer’) for an empty layer. Valid only when the layer is empty and when isBackgroundLayer is false. See isBackgroundLayer. You can use the kind property to make a background layer a normal layer; however, to make a layer a background layer, you must set isBackgroundLayer to true.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LayerKind</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="layerMaskDensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerMaskDensity</span></span><a class="headerlink" href="#layerMaskDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The density of the layer mask (between 0.0 and 100.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="layerMaskFeather">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerMaskFeather</span></span><a class="headerlink" href="#layerMaskFeather" title="Permalink to this definition">¶</a></dt>
+<dd><p>The feather of the layer mask (between 0.0 and 250.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="linkedLayers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">linkedLayers</span></span><a class="headerlink" href="#linkedLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layers linked to this layer. See ArtLayer.link.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opacity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">opacity</span></span><a class="headerlink" href="#opacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The master opacity of the layer, a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span> <span class="pre">[0.0..100.0].</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The object’s container.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pixelsLocked">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pixelsLocked</span></span><a class="headerlink" href="#pixelsLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the pixels in the layer’s image cannot be edited using the paintbrush tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="positionLocked">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">positionLocked</span></span><a class="headerlink" href="#positionLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the pixels in the layer’s image cannot be moved within the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="textItem">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">textItem</span></span><a class="headerlink" href="#textItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>The text item that is associated with the layer. Valid only when kind = LayerKind.TEXT.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TextItem</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="transparentPixelsLocked">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transparentPixelsLocked</span></span><a class="headerlink" href="#transparentPixelsLocked" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if editing is confined to the opaque portions of the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="typename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typename</span></span><a class="headerlink" href="#typename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class name of the referenced artLayer object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="vectorMaskDensity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vectorMaskDensity</span></span><a class="headerlink" href="#vectorMaskDensity" title="Permalink to this definition">¶</a></dt>
+<dd><p>The density of the vector mask (between 0.0 and 250.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="vectorMaskFeather">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">vectorMaskFeather</span></span><a class="headerlink" href="#vectorMaskFeather" title="Permalink to this definition">¶</a></dt>
+<dd><p>The feather of the vector mask (between 0.0 and 250.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">double</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="visible">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">visible</span></span><a class="headerlink" href="#visible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the layer is visible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="xmpMetadata">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xmpMetadata</span></span><a class="headerlink" href="#xmpMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata for the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#xmpMetadata" title="xmpMetadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">xmpMetadata</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="adjustBrightnessContrast">
+<span class="sig-name descname"><span class="pre">adjustBrightnessContrast</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brightness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">contrast</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adjustBrightnessContrast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the brightness in the range [-100..100] and contrast [-100..100].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">brightness<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">contrast<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="adjustColorBalance">
+<span class="sig-name descname"><span class="pre">adjustColorBalance</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">shadows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midtones</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserveLuminosity</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#adjustColorBalance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the color balance of the layer’s component channels. For shadows, midtones, and highlights, the array must include three values in the range [-100..100], which represent cyan or red, magenta or green, and yellow or blue, when the document mode is CMYK or RGB. See Document.mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">shadows<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">midtones<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">highlights<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">preserveLuminosity<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="adjustCurves">
+<span class="sig-name descname"><span class="pre">adjustCurves</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curveShape</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adjustCurves" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the tonal range of the selected channel using up to fourteen points. Each value in the curveShape array is a point pair, an array of an x and y integer value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">curveShape<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="adjustLevels">
+<span class="sig-name descname"><span class="pre">adjustLevels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputRangeStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputRangeEnd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inputRangeGamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputRangeStart</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputRangeEnd</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#adjustLevels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the levels of the selected channels</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputRangeStart<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..253]</span></code></p>
+</dd>
+<dt class="field-even">inputRangeEnd<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[(start+2)..255]</span></code></p>
+</dd>
+<dt class="field-odd">inputRangeGamma<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.10..9.99]</span></code></p>
+</dd>
+<dt class="field-even">outputRangeStart<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..253]</span></code></p>
+</dd>
+<dt class="field-odd">outputRangeEnd<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[(start+2)..255]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyAddNoise">
+<span class="sig-name descname"><span class="pre">applyAddNoise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monochromatic</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyAddNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Add Noise filter amount is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..400]</span></code></p>
+</dd>
+<dt class="field-even">distribution<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">NoiseDistribution</span></code></p>
+</dd>
+<dt class="field-odd">monochromatic<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyAverage">
+<span class="sig-name descname"><span class="pre">applyAverage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyAverage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Average filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyBlur">
+<span class="sig-name descname"><span class="pre">applyBlur</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Blur filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyBlurMore">
+<span class="sig-name descname"><span class="pre">applyBlurMore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyBlurMore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Blur More filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyClouds">
+<span class="sig-name descname"><span class="pre">applyClouds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyClouds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Clouds filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyCustomFilter">
+<span class="sig-name descname"><span class="pre">applyCustomFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">characteristics</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyCustomFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies a custom filter. The characteristics array has 25 members. See Adobe Photoshop Help for specific instructions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">characteristics<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">scale<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">offset<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDeInterlace">
+<span class="sig-name descname"><span class="pre">applyDeInterlace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eliminateFields</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">createFields</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyDeInterlace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the De-Interlace filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">eliminateFields<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">EliminateFields</span></code></p>
+</dd>
+<dt class="field-even">createFields<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CreateFields</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDespeckle">
+<span class="sig-name descname"><span class="pre">applyDespeckle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyDespeckle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Despeckle filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDifferenceClouds">
+<span class="sig-name descname"><span class="pre">applyDifferenceClouds</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyDifferenceClouds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Difference Clouds filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDiffuseGlow">
+<span class="sig-name descname"><span class="pre">applyDiffuseGlow</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">graininess</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">glowAmount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearAmount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyDiffuseGlow" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Diffuse Glow filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">graininess<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..10]</span></code></p>
+</dd>
+<dt class="field-even">glowAmount<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..20]</span></code></p>
+</dd>
+<dt class="field-odd">clearAmount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..20]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDisplace">
+<span class="sig-name descname"><span class="pre">applyDisplace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">horizontalScale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verticalScale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacement</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undefinedareas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displacementMapFiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyDisplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Displace filter using the specified horizontal and vertical scale, mapping type, treatment of undistorted areas, and path to the distortion image map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">horizontalScale<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-999..999]</span></code></p>
+</dd>
+<dt class="field-even">verticalScale<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-999..999]</span></code></p>
+</dd>
+<dt class="field-odd">displacement<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DisplacementMapType</span></code></p>
+</dd>
+<dt class="field-even">undefinedareas<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UndefinedAreas</span></code></p>
+</dd>
+<dt class="field-odd">displacementMapFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyDustAndScratches">
+<span class="sig-name descname"><span class="pre">applyDustAndScratches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyDustAndScratches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Dust &amp; Scratches filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+<dt class="field-even">threshold<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..255]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyGaussianBlur">
+<span class="sig-name descname"><span class="pre">applyGaussianBlur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyGaussianBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Gaussian Blur filter within the specified radius (in pixels)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..250.0]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyGlassEffect">
+<span class="sig-name descname"><span class="pre">applyGlassEffect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">distortion</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smoothness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scaling</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">invert</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texture</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">textureFile</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#applyGlassEffect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Glass filter. scaling is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">distortion<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..20]</span></code></p>
+</dd>
+<dt class="field-even">smoothness<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..15]</span></code></p>
+</dd>
+<dt class="field-odd">scaling<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[50..200]</span></code></p>
+</dd>
+<dt class="field-even">invert<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-odd">texture<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TextureType</span></code></p>
+</dd>
+<dt class="field-even">textureFile<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyHighPass">
+<span class="sig-name descname"><span class="pre">applyHighPass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyHighPass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the High Pass filter within the specified radius.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..250.0]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyLensBlur">
+<span class="sig-name descname"><span class="pre">applyLensBlur</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">focalDistance</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">invertDepthMap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bladeCurvature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">brightness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distribution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monochromatic</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#applyLensBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Lens Blur filter. source: The source for the depth map (default: DepthMapSource.NONE) focalDistance : The blur focal distance for the depth map (default: 0). invertDepthMask : True if the depth map is inverted (default: false). shape: The shape of the iris (default: Geometry.HEXAGON) radius: The radius of the iris (default: 15). bladeCurvature: The blade curvature of the iris (default: 0). rotation: The rotation of the iris (default: 0) brightness: The brightness for the specular highlights (default: 0). threshold: The threshold for the specular highlights (default: 0). amount: The amount of noise (default: 0) distribution: The distribution value for the noise (default: NoiseDistribution.UNIFORM). monochromatic: True if the noise is monochromatic (default: false).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">source<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DepthMapSource</span></code></p>
+</dd>
+<dt class="field-even">focalDistance<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">invertDepthMap<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-even">shape<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Geometry</span></code></p>
+</dd>
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">bladeCurvature<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">rotation<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">brightness<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">threshold<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">amount<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">distribution<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">NoiseDistribution</span></code></p>
+</dd>
+<dt class="field-even">monochromatic<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyLensFlare">
+<span class="sig-name descname"><span class="pre">applyLensFlare</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">brightness</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flareCenter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lensType</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyLensFlare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Lens Flare filter with the specified brightness (0 - 300, as a percentage), the x and y coordinates (unit value) of the flare center, and the lens type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">brightness<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">flareCenter<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array(UnitValue)</span></code></p>
+</dd>
+<dt class="field-odd">lensType<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LensType</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyMaximum">
+<span class="sig-name descname"><span class="pre">applyMaximum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyMaximum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Maximum filter within the specified radius (in pixels).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyMedianNoise">
+<span class="sig-name descname"><span class="pre">applyMedianNoise</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyMedianNoise" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Median Noise filter within the specified radius (in pixels).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyMinimum">
+<span class="sig-name descname"><span class="pre">applyMinimum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyMinimum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Minimum filter within the specified radius (in pixels) (1 - 100).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyMotionBlur">
+<span class="sig-name descname"><span class="pre">applyMotionBlur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyMotionBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Motion Blur filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">angle<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-360..360]</span></code></p>
+</dd>
+<dt class="field-even">radius<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..999]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyNTSC">
+<span class="sig-name descname"><span class="pre">applyNTSC</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applyNTSC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the NTSC colors filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyOceanRipple">
+<span class="sig-name descname"><span class="pre">applyOceanRipple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnitude</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyOceanRipple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Ocean Ripple filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">size<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..15]</span></code></p>
+</dd>
+<dt class="field-even">magnitude<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..20]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyOffset">
+<span class="sig-name descname"><span class="pre">applyOffset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">horizontal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undefinedAreas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyOffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the layer the specified amount horizontally and vertically (min/max amounts depend on layer size), leaving an undefined area at the layer’s original location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">horizontal<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">vertical<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-odd">undefinedAreas<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">OffsetUndefinedAreas</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyPinch">
+<span class="sig-name descname"><span class="pre">applyPinch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyPinch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Pinch filter. amount is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-100..100]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyPolarCoordinates">
+<span class="sig-name descname"><span class="pre">applyPolarCoordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">conversion</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyPolarCoordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Polar Coordinates filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">conversion<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PolarConversionType</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyRadialBlur">
+<span class="sig-name descname"><span class="pre">applyRadialBlur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blurMethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blurQuality</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">blurCenter</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#applyRadialBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Radial Blur filter in the specified amount, using either a spin or zoom effect and the specified quality. The parameter blurCenter is the position (unit value).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+<dt class="field-even">blurMethod<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RadialBlurMethod</span></code></p>
+</dd>
+<dt class="field-odd">blurQuality<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RadialBlurQuality</span></code></p>
+</dd>
+<dt class="field-even">blurCenter<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyRipple">
+<span class="sig-name descname"><span class="pre">applyRipple</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyRipple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Ripple filter in the specified amount, throughout the image and in the specified size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-999..999]</span></code></p>
+</dd>
+<dt class="field-even">size<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RippleSize</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applySharpen">
+<span class="sig-name descname"><span class="pre">applySharpen</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applySharpen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Sharpen filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applySharpenEdges">
+<span class="sig-name descname"><span class="pre">applySharpenEdges</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applySharpenEdges" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Sharpen Edges filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applySharpenMore">
+<span class="sig-name descname"><span class="pre">applySharpenMore</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#applySharpenMore" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Sharpen More filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyShear">
+<span class="sig-name descname"><span class="pre">applyShear</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curve</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undefinedAreas</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyShear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Shear filter. The curve defines a curve with [2..255] points. Each value in the curve array is a point pair, an array of an x and y integer value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">curve<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">undefinedAreas<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UndefinedAreas</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applySmartBlur">
+<span class="sig-name descname"><span class="pre">applySmartBlur</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blurQuality</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applySmartBlur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Smart Blur filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">radius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..100.0]</span></code></p>
+</dd>
+<dt class="field-even">threshold<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..100.0]</span></code></p>
+</dd>
+<dt class="field-odd">blurQuality<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SmartBlurQuality</span></code></p>
+</dd>
+<dt class="field-even">mode<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SmartBlurMode</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applySpherize">
+<span class="sig-name descname"><span class="pre">applySpherize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applySpherize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Spherize filter. amount is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-100..100]</span></code></p>
+</dd>
+<dt class="field-even">mode<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SpherizeMode</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyStyle">
+<span class="sig-name descname"><span class="pre">applyStyle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">styleName</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyStyle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the specified style to the layer. You must use a style from the Styles list in the Layer Styles Palette.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">styleName<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyTextureFill">
+<span class="sig-name descname"><span class="pre">applyTextureFill</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">textureFile</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyTextureFill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Texture Fill filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">textureFile<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyTwirl">
+<span class="sig-name descname"><span class="pre">applyTwirl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyTwirl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Twirl filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">angle<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-999..999]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyUnSharpMask">
+<span class="sig-name descname"><span class="pre">applyUnSharpMask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyUnSharpMask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Unsharp Mask filter. (amount is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..500]</span></code></p>
+</dd>
+<dt class="field-even">radius<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.1..250.0]</span></code></p>
+</dd>
+<dt class="field-odd">threshold<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..255]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyWave">
+<span class="sig-name descname"><span class="pre">applyWave</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">generatorNumber</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimumWavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumWavelength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minimumAmplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maximumAmplitude</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">horizontalScale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verticalScale</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">waveType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">undefinedAreas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">randomSeed</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyWave" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Wave filter. Scale factors are percentage values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">generatorNumber<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..999]</span></code></p>
+</dd>
+<dt class="field-even">minimumWavelength<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..998]</span></code></p>
+</dd>
+<dt class="field-odd">maximumWavelength<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[2..min+1]</span></code></p>
+</dd>
+<dt class="field-even">minimumAmplitude<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..998]</span></code></p>
+</dd>
+<dt class="field-odd">maximumAmplitude<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[2..min+1]</span></code></p>
+</dd>
+<dt class="field-even">horizontalScale<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+<dt class="field-odd">verticalScale<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+<dt class="field-even">waveType<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">WaveType</span></code></p>
+</dd>
+<dt class="field-odd">undefinedAreas<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UndefinedAreas</span></code></p>
+</dd>
+<dt class="field-even">randomSeed<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="applyZigZag">
+<span class="sig-name descname"><span class="pre">applyZigZag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ridges</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#applyZigZag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies the Zigzag filter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-100..100]</span></code></p>
+</dd>
+<dt class="field-even">ridges<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..20]</span></code></p>
+</dd>
+<dt class="field-odd">style<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ZigZagType</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoContrast">
+<span class="sig-name descname"><span class="pre">autoContrast</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoContrast" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the contrast of the selected channels automatically.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="autoLevels">
+<span class="sig-name descname"><span class="pre">autoLevels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#autoLevels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the levels of the selected channels using the auto levels option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cuts the layer without moving it to the clipboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">merge</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copies the layer to the clipboard. When the optional argument is set to true, a merged copy is performed (that is, all visible layers are copied to the clipboard).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">merge<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cut">
+<span class="sig-name descname"><span class="pre">cut</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cuts the layer to the clipboard.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="desaturate">
+<span class="sig-name descname"><span class="pre">desaturate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#desaturate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts a color image to a grayscale image in the current color mode by assigning equal values of each component color to each pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">relativeObject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insertionLocation</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a duplicate of the object on the screen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">relativeObject<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+<dt class="field-even">insertionLocation<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ElementPlacement</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="equalize">
+<span class="sig-name descname"><span class="pre">equalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#equalize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Redistributes the brightness values of pixels in an image to more evenly represent the entire range of brightness levels within the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="invert">
+<span class="sig-name descname"><span class="pre">invert</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#invert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverts the colors in the layer by converting the brightness value of each pixel in the channels to the inverse value on the 256-step color-values scale.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="link">
+<span class="sig-name descname"><span class="pre">link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">with</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#link" title="Permalink to this definition">¶</a></dt>
+<dd><p>Links the layer with the specified layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">with<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="merge">
+<span class="sig-name descname"><span class="pre">merge</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merges the layer down, removing the layer from the document; returns a reference to the art layer that this layer is merged into.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mixChannels">
+<span class="sig-name descname"><span class="pre">mixChannels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">outputChannels</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">monochrome</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#mixChannels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies a targeted (output) color channel using a mix of the existing color channels in the image. The outputChannels parameter is an array of channel specifications. For each component channel, specify a list of adjustment values in the range [-200..200] followed by a ‘constant’ value [-200..200].) When monochrome = true, the maximum number of channel value specifications is 1. Valid only when docRef.mode = DocumentMode.RGB or CMYK. RGB arrays must include four values. CMYK arrays must include five values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">outputChannels<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">monochrome<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="move">
+<span class="sig-name descname"><span class="pre">move</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relativeObject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">insertionLocation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the layer relative to the object specified in parameters. For art layers, only the constant values ElementPlacement. PLACEBEFORE and PLACEAFTER are valid. For layer sets, only the constant values ElementPlacement. PLACEBEFORE and INSIDE are valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">relativeObject<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+<dt class="field-even">insertionLocation<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ElementPlacement</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="photoFilter">
+<span class="sig-name descname"><span class="pre">photoFilter</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">fillColor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">preserveLuminosity</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#photoFilter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjust the layer’s color balance and temperature as if a color filter had been applied. density is a percentage value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">fillColor<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SolidColor</span></code></p>
+</dd>
+<dt class="field-even">density<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..100]</span></code></p>
+</dd>
+<dt class="field-odd">preserveLuminosity<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="posterize">
+<span class="sig-name descname"><span class="pre">posterize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">levels</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#posterize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies the number of tonal levels for each channel and then maps pixels to the closest matching level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">levels<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[2..225]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rasterize">
+<span class="sig-name descname"><span class="pre">rasterize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rasterize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts the targeted contents in the layer into a flat, raster image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">RasterizeType</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes the object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="resize">
+<span class="sig-name descname"><span class="pre">resize</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">horizontal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertical</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#resize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resizes the layer to the specified dimensions (as a percentage of its current size) and places it in the specified position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">horizontal<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">vertical<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">anchor<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AnchorPosition</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rotate">
+<span class="sig-name descname"><span class="pre">rotate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#rotate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates rotates the layer around the specified anchor point (default: MIDDLECENTER).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">angle<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">anchor<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AnchorPosition</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="selectiveColor">
+<span class="sig-name descname"><span class="pre">selectiveColor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">selectionMethod</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">reds</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yellows</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">greens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cyans</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blues</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magentas</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whites</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neutrals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blacks</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#selectiveColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modifies the amount of a process color in a specified primary color without affecting the other primary colors. Each color array must have four values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">selectionMethod<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AdjustmentReference</span></code></p>
+</dd>
+<dt class="field-even">reds<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">yellows<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">greens<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">cyans<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">blues<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">magentas<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">whites<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">neutrals<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">blacks<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shadowHighlight">
+<span class="sig-name descname"><span class="pre">shadowHighlight</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">shadowAmount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadowWidth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shadowRadius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlightAmount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlightWidth</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">highlightRadius</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colorCorrection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">midtoneContrast</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blackClip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">whiteClip</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#shadowHighlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adjusts the range of tones in the image’s shadows and highlights. Amounts and widths are percentage values. Radius values are in pixels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">shadowAmount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..100]</span></code></p>
+</dd>
+<dt class="field-even">shadowWidth<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.100]</span></code></p>
+</dd>
+<dt class="field-odd">shadowRadius<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..2500]</span></code></p>
+</dd>
+<dt class="field-even">highlightAmount<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..100]</span></code></p>
+</dd>
+<dt class="field-odd">highlightWidth<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..100]</span></code></p>
+</dd>
+<dt class="field-even">highlightRadius<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0..2500]</span></code></p>
+</dd>
+<dt class="field-odd">colorCorrection<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-100..100]</span></code></p>
+</dd>
+<dt class="field-even">midtoneContrast<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[-100..100]</span></code></p>
+</dd>
+<dt class="field-odd">blackClip<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.000..50.000]</span></code></p>
+</dd>
+<dt class="field-even">whiteClip<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[0.000..50.000]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="threshold">
+<span class="sig-name descname"><span class="pre">threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#threshold" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts grayscale or color images to high-contrast, B/W images by converting pixels lighter than the specified threshold to white and pixels darker than the threshold to black.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">level<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number[1..255]</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="translate">
+<span class="sig-name descname"><span class="pre">translate</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">deltaX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">deltaY</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#translate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the layer the specified amount (in the given unit) relative to its current position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">deltaX<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">deltaY<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="unlink">
+<span class="sig-name descname"><span class="pre">unlink</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#unlink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlinks the layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">ArtLayer</a><ul>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../Application/intro.html"
+                          title="previous chapter">Application</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../ArtLayers/intro.html"
+                          title="next chapter">ArtLayers</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/JavaScript Object Reference/ArtLayer/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../ArtLayers/intro.html" title="ArtLayers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../Application/intro.html" title="Application"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">ArtLayer</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, TsXor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>

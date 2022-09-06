@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>JavaScript support in Adobe Photoshop &#8212; Photoshop js reference  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Object model usage and naming" href="../Object%20model%20usage%20and%20naming/intro.html" />
+    <link rel="prev" title="Introduction" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../Object%20model%20usage%20and%20naming/intro.html" title="Object model usage and naming"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Introduction"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Introduction</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JavaScript support in Adobe Photoshop</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="javascript-support-in-adobe-photoshop">
+<h1>JavaScript support in Adobe Photoshop<a class="headerlink" href="#javascript-support-in-adobe-photoshop" title="Permalink to this heading">¶</a></h1>
+<p>For a JavaScript file to be recognized by Photoshop as a valid script file, it must use either a <code class="docutils literal notranslate"><span class="pre">.js</span></code> or a <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> extension.</p>
+<p>On the Mac OS, there is no difference in the way scripts with the two extensions function. On Windows, if the script files is opened from inside Photoshop, there is no difference between using the <code class="docutils literal notranslate"><span class="pre">.js</span></code> and <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> extension. However, if the script is launched by double-clicking on it, a script with the <code class="docutils literal notranslate"><span class="pre">.js</span></code> extension is interpreted with the Microsoft JScript engine, and it cannot launch Adobe Photoshop. For Windows, using the <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> extension is preferrable, since it interprets the script with the ExtendScript engine.</p>
+<p>All of the Adobe Creative Cloud applications, including Adobe Photoshop, use ExtendScript, Adobe’s extended implementation of JavaScript. ExtendScript files are distinguished by the <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> extension. ExtendScript offers all standard JavaScript features, plus additional features and utilities, such as:</p>
+<ul class="simple">
+<li><p>A debugging environment (the ExtendScript Toolkit)</p></li>
+<li><p>A localization utility</p></li>
+<li><p>Tools that allow you to combine scripts and direct them to particular applications</p></li>
+<li><p>Platform-independent file and folder representation</p></li>
+</ul>
+<p>Many of the JavaScript objects and methods use objects defined in ExtendScript, such as the <code class="docutils literal notranslate"><span class="pre">File</span></code> object, the <code class="docutils literal notranslate"><span class="pre">Folder</span></code> object, and the <code class="docutils literal notranslate"><span class="pre">UnitValue</span></code> object. For that reason, using the <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> extension for your script files is preferable.</p>
+<p>For details of these and additional features, see the JavaScript Tools Guide. This document is installed with Creative Cloud applications at these locations:</p>
+<ul class="simple">
+<li><p>In Windows: <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Adobe\Adobe</span> <span class="pre">Utilities\ExtendScript</span> <span class="pre">Toolkit</span> <span class="pre">CC\SDK</span></code></p></li>
+<li><p>In Mac OS: <code class="docutils literal notranslate"><span class="pre">Applications/Utilities/Adobe</span> <span class="pre">Utilities/ExtendScript</span> <span class="pre">Toolkit</span> <span class="pre">CC/SDK</span></code></p></li>
+</ul>
+<p>The latest versions of this document and of the ExtendScript Tookit, can also be downloaded from Adobe Developer Center, <a class="reference external" href="http://www.adobe.com/devnet/">http://www.adobe.com/devnet/</a></p>
+<section id="executing-scripts">
+<h2>Executing scripts<a class="headerlink" href="#executing-scripts" title="Permalink to this heading">¶</a></h2>
+<p>The Adobe Photoshop interface includes a Scripts menu (<strong>File &gt; Scripts</strong>) which provides quick and easy access to your JavaScripts. Scripts can be listed directly as menu items that run when you select them, or you can navigate to and run any JavaScript in your file system.</p>
+<p>If Adobe Photoshop encounters an error during script execution, it displays the error message.</p>
+<section id="installing-scripts">
+<h3>Installing scripts<a class="headerlink" href="#installing-scripts" title="Permalink to this heading">¶</a></h3>
+<p>To install a JavaScript in the Scripts menu, place it in the Scripts folder (<strong>Photoshop/Presets/Scripts</strong>). The names of the scripts in the Scripts folder, without the file name extension, will be displayed in the Scripts menu. Any number of scripts may be installed in the Scripts menu.</p>
+<p>Scripts added to the Scripts folder while Adobe Photoshop is running will not appear in the Scripts menu until the next time you launch the application.</p>
+<p>All scripts found in the Scripts folder and sub-folders are displayed at the top level of the <strong>File &gt; Scripts</strong> menu. The addition of sub-folders does not add a hierarchical organization to the Scripts menu.</p>
+</section>
+<section id="executing-other-scripts">
+<h3>Executing other scripts<a class="headerlink" href="#executing-other-scripts" title="Permalink to this heading">¶</a></h3>
+<p>The <strong>Browse</strong> item at the end of the <strong>Scripts</strong> menu (<strong>File &gt; Scripts &gt; Browse</strong>) allows you to execute scripts which are not installed in the Scripts folder. You can also use Browse to select scripts installed in the Scripts folder after the application was last launched.</p>
+<p>Selecting <strong>Browse</strong> displays a file browser dialog which allows you to select a script file for execution. Only <code class="docutils literal notranslate"><span class="pre">.js</span></code> or <code class="docutils literal notranslate"><span class="pre">.jsx</span></code> files are displayed in the browse dialog. When you select a script file, it is executed the same way as an installed script.</p>
+</section>
+</section>
+<section id="startup-scripts">
+<h2>Startup scripts<a class="headerlink" href="#startup-scripts" title="Permalink to this heading">¶</a></h2>
+<p>On startup, Adobe Photoshop executes all .jsx files that it finds in the startup folders.</p>
+<ul class="simple">
+<li><p>On Windows, the startup folder for user-defined scripts is: <code class="docutils literal notranslate"><span class="pre">C:\Program</span> <span class="pre">Files\Common</span> <span class="pre">Files\Adobe\Startup</span> <span class="pre">Scripts</span> <span class="pre">CC\Adobe</span> <span class="pre">Photoshop</span></code></p></li>
+<li><p>On Mac OS, the startup folder for user-defined scripts is: <code class="docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/Adobe/Startup</span> <span class="pre">Scripts</span> <span class="pre">CC/Adobe</span> <span class="pre">Photoshop</span></code></p></li>
+</ul>
+<p>If a script is meant to be executed only by Adobe Photoshop, it must include code such as the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span> <span class="n">BridgeTalk</span><span class="o">.</span><span class="n">appName</span> <span class="o">==</span> <span class="s2">&quot;photoshop&quot;</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="o">//</span><span class="k">continue</span> <span class="n">executing</span> <span class="n">script</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For additional details, see the <em>JavaScript Tools Guide</em>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">JavaScript support in Adobe Photoshop</a><ul>
+<li><a class="reference internal" href="#executing-scripts">Executing scripts</a><ul>
+<li><a class="reference internal" href="#installing-scripts">Installing scripts</a></li>
+<li><a class="reference internal" href="#executing-other-scripts">Executing other scripts</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#startup-scripts">Startup scripts</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">Introduction</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../Object%20model%20usage%20and%20naming/intro.html"
+                          title="next chapter">Object model usage and naming</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/Introduction/JavaScript support in Adobe Photoshop/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../Object%20model%20usage%20and%20naming/intro.html" title="Object model usage and naming"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Introduction"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Introduction</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">JavaScript support in Adobe Photoshop</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, TsXor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>

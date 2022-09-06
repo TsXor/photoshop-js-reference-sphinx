@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>BatchOptions &#8212; Photoshop js reference  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="BitmapConversionOptions" href="../BitmapConversionOptions/intro.html" />
+    <link rel="prev" title="ArtLayers" href="../ArtLayers/intro.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../BitmapConversionOptions/intro.html" title="BitmapConversionOptions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ArtLayers/intro.html" title="ArtLayers"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BatchOptions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="batchoptions">
+<h1>BatchOptions<a class="headerlink" href="#batchoptions" title="Permalink to this heading">¶</a></h1>
+<p>Options for running a batch operation using the Application.batch() method.</p>
+<p>JavaScript only supports folders as sources for batch commands. Specify the batch source folder as the <code class="docutils literal notranslate"><span class="pre">inputFiles</span></code> parameter of the Application.batch() method.</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="destination">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destination</span></span><a class="headerlink" href="#destination" title="Permalink to this definition">¶</a></dt>
+<dd><p>The type of destination for the processed files (default: <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.NODESTINATION</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BatchDestinationType</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="destinationFolder">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">destinationFolder</span></span><a class="headerlink" href="#destinationFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The folder location for the processed files. Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Folder</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="errorFile">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">errorFile</span></span><a class="headerlink" href="#errorFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file in which to log errors encountered. To display errors on the screen (and stop batch processing when errors occur) leave blank.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fileNaming">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fileNaming</span></span><a class="headerlink" href="#fileNaming" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of file naming options (maximum: 6). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">FileNamingType</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="macintoshCompatible">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">macintoshCompatible</span></span><a class="headerlink" href="#macintoshCompatible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to make the final file names Macintosh compatible (default: <code class="docutils literal notranslate"><span class="pre">true</span></code>). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="overrideOpen">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">overrideOpen</span></span><a class="headerlink" href="#overrideOpen" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to override action open commands (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="overrideSave">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">overrideSave</span></span><a class="headerlink" href="#overrideSave" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to override save as action steps with the specified destination (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code> or <code class="docutils literal notranslate"><span class="pre">SAVEANDCLOSE</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="startingSerial">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">startingSerial</span></span><a class="headerlink" href="#startingSerial" title="Permalink to this definition">¶</a></dt>
+<dd><p>The starting serial number to use in naming files (default: 1). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="suppressOpen">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suppressOpen</span></span><a class="headerlink" href="#suppressOpen" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to suppress the file open options dialogs (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="suppressProfile">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">suppressProfile</span></span><a class="headerlink" href="#suppressProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to suppress the color profile warnings (default: <code class="docutils literal notranslate"><span class="pre">false</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="typename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typename</span></span><a class="headerlink" href="#typename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class name of the referenced <code class="docutils literal notranslate"><span class="pre">batchOptions</span></code> object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="unixCompatible">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unixCompatible</span></span><a class="headerlink" href="#unixCompatible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to make the final file name Unix compatible (default: <code class="docutils literal notranslate"><span class="pre">true</span></code>). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="windowsCompatible">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">windowsCompatible</span></span><a class="headerlink" href="#windowsCompatible" title="Permalink to this definition">¶</a></dt>
+<dd><p>True to make the final file names Windows compatible (default: <code class="docutils literal notranslate"><span class="pre">true</span></code>). Valid only when destination = <code class="docutils literal notranslate"><span class="pre">BatchDestinationType.FOLDER</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">BatchOptions</a><ul>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../ArtLayers/intro.html"
+                          title="previous chapter">ArtLayers</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../BitmapConversionOptions/intro.html"
+                          title="next chapter">BitmapConversionOptions</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/JavaScript Object Reference/BatchOptions/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../BitmapConversionOptions/intro.html" title="BitmapConversionOptions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ArtLayers/intro.html" title="ArtLayers"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BatchOptions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, TsXor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Object descriptions &#8212; Photoshop js reference  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nature.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="ActionDescriptor" href="../ActionDescriptor/intro.html" />
+    <link rel="prev" title="JavaScript Object Reference" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../ActionDescriptor/intro.html" title="ActionDescriptor"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="JavaScript Object Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Object descriptions</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="object-descriptions">
+<h1>Object descriptions<a class="headerlink" href="#object-descriptions" title="Permalink to this heading">¶</a></h1>
+<p>Object properties and methods are described in separate tables for each object. The following sections describe the conventions used in these descriptions.</p>
+<section id="properties-notation">
+<h2>Properties notation<a class="headerlink" href="#properties-notation" title="Permalink to this heading">¶</a></h2>
+<p>The Properties table for an object lists the following:</p>
+<ul class="simple">
+<li><p>The properties defined in each object.</p></li>
+<li><p>The value type for each property.</p></li>
+</ul>
+<p>When the value type is a constant or another object, the value is a hypertext link to the listing for that constant or object.</p>
+<ul class="simple">
+<li><p>The property’s input status: read-only or read-write.</p></li>
+<li><p>A description that explains what the property does.</p></li>
+</ul>
+<p>(a chart here)</p>
+<p>For constants, like <code class="docutils literal notranslate"><span class="pre">DialogModes</span></code> in the sample, click the link to go to the table that shows allowed values.
+Constants are represented by objects, and allowed values are properties of those objects. Specify a constant value in the form <em>ConstantName.VALUE.</em> For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">displayDialogs</span> <span class="o">=</span> <span class="n">DialogModes</span><span class="o">.</span><span class="n">ERROR</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+<section id="methods-notation">
+<h2>Methods notation<a class="headerlink" href="#methods-notation" title="Permalink to this heading">¶</a></h2>
+<p>The Methods table for an object lists the following:</p>
+<ul class="simple">
+<li><p>The method name.</p></li>
+<li><p>The parameters list.</p></li>
+<li><p>The parameter value types, on lines corresponding to each parameter.</p></li>
+<li><p>Return value type</p></li>
+<li><p>A description of what the method does, and further descriptions of parameters, if needed.</p></li>
+</ul>
+<p>(a chart here)</p>
+<p>When a parameter type or return value is a constant or another object, the value is a hypertext link to the listing for that constant or object.</p>
+<p>Parameters can be required or optional. Optional parameters are indicated in the table by square brackets ([]). In the example, the first parameters, bounds, is required. The remaining parameters are all optional.</p>
+<p>You must pass a value for each required parameter. You can leave out optional parameters if there are no remaining values to pass; however, if you wish to use the default value for any optional parameter that is not the last one specified, pass undefined as a placeholder. You must enter the values in the order they are listed, so that the JavaScript compiler knows which value you are entering.</p>
+<p>For example, the following passes only the required parameter (using a previously-defined variable for the bounding region):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">activeDocument</span><span class="o">.</span><span class="n">crop</span><span class="p">(</span> <span class="n">myRegion</span> <span class="p">);</span>
+</pre></div>
+</div>
+<p>The following skips the angle parameter, specifies the width value, and omits the final height value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">myWidth</span> <span class="o">=</span> <span class="n">new</span> <span class="n">UnitValue</span><span class="p">(</span> <span class="s2">&quot;500 pixels&quot;</span> <span class="p">);</span>
+<span class="n">app</span><span class="o">.</span><span class="n">executeAction</span><span class="p">(</span> <span class="n">myRegion</span><span class="p">,</span><span class="n">undefined</span><span class="p">,</span><span class="n">myWidth</span> <span class="p">);</span>
+</pre></div>
+</div>
+</section>
+<section id="but-something-changed">
+<h2>But something changed<a class="headerlink" href="#but-something-changed" title="Permalink to this heading">¶</a></h2>
+<p>However, in this doc, functions will be documented the way sphinx does, not charts.</p>
+<p>You see that (a chart here) above? In this doc they should be:</p>
+<section id="property-description">
+<h3>Property description:<a class="headerlink" href="#property-description" title="Permalink to this heading">¶</a></h3>
+<dl class="py property">
+<dt class="sig sig-object py" id="displayDialogs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">displayDialogs</span></span><a class="headerlink" href="#displayDialogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dialog mode for the application, which controls what types of dialogs should be displayed when running scripts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DialogModes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="function-description">
+<h3>Function description:<a class="headerlink" href="#function-description" title="Permalink to this heading">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="crop">
+<span class="sig-name descname"><span class="pre">crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#crop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crops the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">bounds<span class="colon">:</span></dt>
+<dd class="field-odd"><p>array of 4 <code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code>: for the region remaining after cropping, [left, top, right, bottom]</p>
+</dd>
+<dt class="field-even">angle<span class="colon">:</span></dt>
+<dd class="field-even"><p>number</p>
+</dd>
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">height<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Object descriptions</a><ul>
+<li><a class="reference internal" href="#properties-notation">Properties notation</a></li>
+<li><a class="reference internal" href="#methods-notation">Methods notation</a></li>
+<li><a class="reference internal" href="#but-something-changed">But something changed</a><ul>
+<li><a class="reference internal" href="#property-description">Property description:</a></li>
+<li><a class="reference internal" href="#function-description">Function description:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">JavaScript Object Reference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../ActionDescriptor/intro.html"
+                          title="next chapter">ActionDescriptor</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/JavaScript Object Reference/Object descriptions/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../ActionDescriptor/intro.html" title="ActionDescriptor"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="JavaScript Object Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >JavaScript Object Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Object descriptions</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, TsXor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
