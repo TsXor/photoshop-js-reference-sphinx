@@ -1,4 +1,4 @@
 @echo off
 cd %~dp0
-cmd /k ..\doc\make.bat html
+cmd /k ..\docs\make.bat html
 pause
