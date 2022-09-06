@@ -19,3 +19,15 @@ The Photoshop objects (the JavaScript type library for Adobe® Photoshop®) are 
    BatchOptions/intro.rst
    BitmapConversionOptions/intro.rst
    BMPSaveOptions/intro.rst
+   CameraRAWOpenOptions/intro.rst
+   Channel/intro.rst 
+   Channels/intro.rst 
+   CMYKColor/intro.rst 
+   ColorSampler/intro.rst 
+   ColorSamplers/intro.rst 
+   ContactSheetOptions/intro.rst 
+   CountItem/intro.rst 
+   CountItems/intro.rst 
+   DCS1_SaveOptions/intro.rst 
+   DCS2_SaveOptions/intro.rst 
+   DICOMOpenOptions/intro.rst 

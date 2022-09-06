@@ -12,18 +12,18 @@
 [Y]        BatchOptions
 [Y]        BitmapConversionOptions
 [Y]        BMPSaveOptions
-[ ]        CameraRAWOpenOptions
-[ ]        Channel
-[ ]        Channels
-[ ]        CMYKColor
-[ ]        ColorSampler
-[ ]        ColorSamplers
-[ ]        ContactSheetOptions
-[ ]        CountItem
-[ ]        CountItems
-[ ]        DCS1_SaveOptions
-[ ]        DCS2_SaveOptions
-[ ]        DICOMOpenOptions
+[Y]        CameraRAWOpenOptions
+[Y]        Channel
+[Y]        Channels
+[Y]        CMYKColor
+[Y]        ColorSampler
+[Y]        ColorSamplers
+[Y]        ContactSheetOptions
+[Y]        CountItem
+[Y]        CountItems
+[Y]        DCS1_SaveOptions
+[Y]        DCS2_SaveOptions
+[Y]        DICOMOpenOptions
 [ ]        Document
 [ ]        DocumentPrintSettings
 [ ]        DocumentInfo
