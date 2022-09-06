@@ -9,9 +9,9 @@
 [Y]        Application
 [Y]        ArtLayer
 [Y]        ArtLayers
-[ ]        BatchOptions
-[ ]        BitmapConversionOptions
-[ ]        BMPSaveOptions
+[Y]        BatchOptions
+[Y]        BitmapConversionOptions
+[Y]        BMPSaveOptions
 [ ]        CameraRAWOpenOptions
 [ ]        Channel
 [ ]        Channels

@@ -16,3 +16,6 @@ The Photoshop objects (the JavaScript type library for Adobe® Photoshop®) are 
    Application/intro.rst
    ArtLayer/intro.rst
    ArtLayers/intro.rst
+   BatchOptions/intro.rst
+   BitmapConversionOptions/intro.rst
+   BMPSaveOptions/intro.rst
