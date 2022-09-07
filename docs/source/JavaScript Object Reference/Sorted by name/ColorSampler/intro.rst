@@ -4,7 +4,8 @@ ColorSampler
 
 A color sampler for a document. Access through the Document.colorSamplers collection. For example::
 
-	var colorSamplerRef = app.activeDocument.colorSamplers[0]; var currentColor = colorSamplerRef.color;
+	var colorSamplerRef = app.activeDocument.colorSamplers[0];
+	var currentColor = colorSamplerRef.color;
 
 **Note**: For additional information about color samplers, see Adobe Photoshop help on the Color SamplerTool.
 
