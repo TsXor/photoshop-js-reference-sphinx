@@ -1,0 +1,1298 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Application &#8212; Photoshop js reference  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/nature.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="ArtLayer" href="../ArtLayer/intro.html" />
+    <link rel="prev" title="ActionReference" href="../ActionReference/intro.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../ArtLayer/intro.html" title="ArtLayer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../ActionReference/intro.html" title="ActionReference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >JavaScript Object Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U">Object Alphabetical Index</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Application</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="application">
+<h1>Application<a class="headerlink" href="#application" title="Permalink to this heading">¶</a></h1>
+<p>The Adobe Adobe Photoshop application object, which is the root of the object model and provides access to all other objects. This object provides application-wide information, such as application defaults and available fonts. It provides many important methods , such as those for opening files and loading documents.</p>
+<p>To access the properties and methods, you can use the pre-defined global variable app. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">docRef</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">documents</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="s2">&quot;docRef&quot;</span><span class="p">,</span> <span class="n">NewDocumentMode</span><span class="o">.</span><span class="n">RGB</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The properties and methods of the Application object are also available at the top level; you can omit references to the Application object altogether. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">var</span> <span class="n">docRef</span> <span class="o">=</span> <span class="n">documents</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">800</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">72</span><span class="p">,</span> <span class="s2">&quot;docRef&quot;</span><span class="p">,</span> <span class="n">NewDocumentMode</span><span class="o">.</span><span class="n">RGB</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This usage can be somewhat ambiguous; for clarity, it is recommended that you use an explicit reference to app</p>
+<section id="properties">
+<h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="activeDocument">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeDocument</span></span><a class="headerlink" href="#activeDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>The frontmost document. Setting this property is equivalent to clicking an open document in the Adobe Photoshop application to bring it to the front of the screen.</p>
+<p>Tip: If there is no open document, accessing this property throws an exception.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="backgroundColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backgroundColor</span></span><a class="headerlink" href="#backgroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default background color and color style for documents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SolidColor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="build">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">build</span></span><a class="headerlink" href="#build" title="Permalink to this definition">¶</a></dt>
+<dd><p>Information about the application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cloudWorkAreaDirectory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cloudWorkAreaDirectory</span></span><a class="headerlink" href="#cloudWorkAreaDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local directory for all cloud documents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">alias</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="colorSettings">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colorSettings</span></span><a class="headerlink" href="#colorSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the current color settings, as selected with Edit &gt; Color Settings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="currentTool">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">currentTool</span></span><a class="headerlink" href="#currentTool" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the current tool selected.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="displayDialogs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">displayDialogs</span></span><a class="headerlink" href="#displayDialogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dialog mode for the application, which controls what types of dialogs should be displayed when running scripts.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DialogModes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="documents">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">documents</span></span><a class="headerlink" href="#documents" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection of open documents. This is the primary point of access for documents that are currently open in the application. The array allows you to access any open document, or to iterate through all open documents.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Documents</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fonts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fonts</span></span><a class="headerlink" href="#fonts" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fonts installed on this system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TextFonts</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="foregroundColor">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">foregroundColor</span></span><a class="headerlink" href="#foregroundColor" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default foreground color (used to paint, fill, and stroke selections).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SolidColor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="freeMemory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">freeMemory</span></span><a class="headerlink" href="#freeMemory" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of unused memory available to Adobe Photoshop.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="locale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">locale</span></span><a class="headerlink" href="#locale" title="Permalink to this definition">¶</a></dt>
+<dd><p>The language location of the application. An Adobe locale code consists of a 2-letter ISO-639 language code and an optional 2-letter ISO 3166 country code separated by an underscore. Case is significant. For example, en_US, en_UK, ja_JP, de_DE, fr_FR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="macintoshFileTypes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">macintoshFileTypes</span></span><a class="headerlink" href="#macintoshFileTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of file image types Adobe Photoshop can open.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="measurementLog">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measurementLog</span></span><a class="headerlink" href="#measurementLog" title="Permalink to this definition">¶</a></dt>
+<dd><p>The log of measurements taken.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementLog</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The application’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="notifiers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notifiers</span></span><a class="headerlink" href="#notifiers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The collection of notifiers currently configured (in the Scripts Events Manager menu in the Adobe Photoshop application).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Notifiers</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="notifiersEnabled">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notifiersEnabled</span></span><a class="headerlink" href="#notifiersEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if all notifiers are enabled.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full path to the location of the Adobe Photoshop application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="playbackDisplayDialogs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">playbackDisplayDialogs</span></span><a class="headerlink" href="#playbackDisplayDialogs" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dialog mode for playback mode, which controls what types of dialog to display when playing back a recorded action with the Actions palette.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DialogModes</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="playbackParameters">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">playbackParameters</span></span><a class="headerlink" href="#playbackParameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores and retrieves parameters used as part of a recorded action. Can be used, for example, to control playback speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="preferences">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preferences</span></span><a class="headerlink" href="#preferences" title="Permalink to this definition">¶</a></dt>
+<dd><p>The application preference settings (equivalent to selecting <strong>Edit &gt; Preferences</strong> in the Adobe Photoshop application in Windows or <strong>Photoshop &gt; Preferences</strong> in Mac OS).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Preferences</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="preferencesFolder">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">preferencesFolder</span></span><a class="headerlink" href="#preferencesFolder" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full path to the Preferences folder.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="recentFiles">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">recentFiles</span></span><a class="headerlink" href="#recentFiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Files in the Recent Files list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scriptingBuildDate">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scriptingBuildDate</span></span><a class="headerlink" href="#scriptingBuildDate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The build date of the Scripting interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="scriptingVersion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">scriptingVersion</span></span><a class="headerlink" href="#scriptingVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the Scripting interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="systemInformation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">systemInformation</span></span><a class="headerlink" href="#systemInformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runtime details of the application and system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="typename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typename</span></span><a class="headerlink" href="#typename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class name of the referenced app object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#version" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of Adobe Photoshop application you are running.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="windowsFileTypes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">windowsFileTypes</span></span><a class="headerlink" href="#windowsFileTypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of file image extensions Adobe Photoshop can open.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="batch">
+<span class="sig-name descname"><span class="pre">batch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#batch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Runs the batch automation routine (similar to the <strong>File &gt; Automate &gt; Batch</strong> command).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code> - specifies the sources for the files to be manipulated by the batch command</p>
+</dd>
+<dt class="field-even">action<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-odd">from<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-even">options<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BatchOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="beep">
+<span class="sig-name descname"><span class="pre">beep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#beep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Causes a “beep” sound.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bringToFront">
+<span class="sig-name descname"><span class="pre">bringToFront</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bringToFront" title="Permalink to this definition">¶</a></dt>
+<dd><p>Makes Adobe Photoshop the active (front-most) application.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="changeProgressText">
+<span class="sig-name descname"><span class="pre">changeProgressText</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progressString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#changeProgressText" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the text that appears in the progress window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">progressString<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to show in the progress window</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="charIDToTypeID">
+<span class="sig-name descname"><span class="pre">charIDToTypeID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">charID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#charIDToTypeID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from a four character code (character ID) to a runtime ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">charID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="compareWithNumbers">
+<span class="sig-name descname"><span class="pre">compareWithNumbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#compareWithNumbers" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">first<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-even">second<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> -</p>
+<p>0: They are equal.</p>
+<p>Less than 0: Either the value of the first character that does not match is lower in the compared string, or all compared characters match but the compared string is shorter.</p>
+<p>Greater than 0: Either the value of the first character that does not match is greater in the compared string, or all compared characters match but the compared string is longer. When a number is encountered it is converted from a string to a number. For example, A1, A2, A10 would be the sorting order, instead of A1, A10, A2 with the normal sort routine.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doAction">
+<span class="sig-name descname"><span class="pre">doAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">action</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">from</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays an action from the Actions palette.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">action<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the name of the action</p>
+</dd>
+<dt class="field-even">from<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the name of the action set</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doForcedProgress">
+<span class="sig-name descname"><span class="pre">doForcedProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progressString</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doForcedProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a task with a progress bar. Forces progress bar to display, ignoring the normal heuristics that keep it from showing unnecessarily (for example, during very short tasks). Other progress APIs must be called periodically to update the progress bar and allow canceling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">progressString<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to show in the progress window</p>
+</dd>
+<dt class="field-even">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to execute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doProgress">
+<span class="sig-name descname"><span class="pre">doProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">progressString</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs a task with a progress bar. Other progress APIs must be called periodically to update the progress bar and allow canceling.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">progressString<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to show in the progress window</p>
+</dd>
+<dt class="field-even">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to execute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doProgressSegmentTask">
+<span class="sig-name descname"><span class="pre">doProgressSegmentTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">segmentLength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">done</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doProgressSegmentTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sections-off a portion of the unused progress bar for execution of a subtask. Returns false on cancel. This method should be used when iterating a list of tasks with unequal run times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">segmentLength<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the length of the current task</p>
+</dd>
+<dt class="field-even">done<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the total length of all completed tasks</p>
+</dd>
+<dt class="field-odd">total<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the total length of all tasks</p>
+</dd>
+<dt class="field-even">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to execute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doProgressSubTask">
+<span class="sig-name descname"><span class="pre">doProgressSubTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">limit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doProgressSubTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sections-off a portion of the unused progress bar for execution of a subtask. Returns false on cancel. This method should be used when iterating a list of tasks with equal run times.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">index<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the 0-based index of the current task</p>
+</dd>
+<dt class="field-even">limit<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the total number of tasks</p>
+</dd>
+<dt class="field-odd">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to execute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="doProgressTask">
+<span class="sig-name descname"><span class="pre">doProgressTask</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">taskLength</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#doProgressTask" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sections-off a portion of the unused progress bar for execution of a subtask.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">taskLength<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code> - the amount of the unused progress bar to section-off between 0.0 and 1.0</p>
+</dd>
+<dt class="field-even">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code> - the string to execute</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code> - false on cancel</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="eraseCustomOptions">
+<span class="sig-name descname"><span class="pre">eraseCustomOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#eraseCustomOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Erases the user object with specified ID value from the Photoshop registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">key<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="executeAction">
+<span class="sig-name descname"><span class="pre">executeAction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eventID</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">descriptor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">displayDialogs</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#executeAction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plays an Action Manager event.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">eventID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">descriptor<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code></p>
+</dd>
+<dt class="field-odd">displayDialogs<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DialogModes</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="executeActionGet">
+<span class="sig-name descname"><span class="pre">executeActionGet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reference</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#executeActionGet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains information about a predefined or recorded action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">reference<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionReference</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="featureEnabled">
+<span class="sig-name descname"><span class="pre">featureEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#featureEnabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines whether the feature specified by name is enabled. The following features are supported as values for name: “photoshop/extended” “photoshop/standard” “photoshop/trial”</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="getCustomOptions">
+<span class="sig-name descname"><span class="pre">getCustomOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#getCustomOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retreives user objects in the Photoshop registry for the ID with value key.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">key<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="isQuicktimeAvailable">
+<span class="sig-name descname"><span class="pre">isQuicktimeAvailable</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#isQuicktimeAvailable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if Quicktime is installed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads a support file (as opposed to a Photoshop image document) from the specified location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">document<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="makeContactSheet">
+<span class="sig-name descname"><span class="pre">makeContactSheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFiles</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#makeContactSheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED for Adobe Photoshop CS4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">options<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ContactSheetOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="makePDFPresentation">
+<span class="sig-name descname"><span class="pre">makePDFPresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFiles</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputFiles</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#makePDFPresentation" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED for Adobe Photoshop CS4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">outputFiles<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-odd">options<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PresentationOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="makePhotoGallery">
+<span class="sig-name descname"><span class="pre">makePhotoGallery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFolder</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputFolder</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#makePhotoGallery" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED for Adobe Photoshop CS4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFolder<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">outputFolder<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-odd">options<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">GalleryOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="makePhotomerge">
+<span class="sig-name descname"><span class="pre">makePhotomerge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFiles</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#makePhotomerge" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED for Adobe Photoshop.</p>
+<p>Use provided script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>runphotomergeFromScript = true;
+$.evalFile( app.path + &quot;Presets/Scripts/Photomerge.jsx&quot;)
+photomerge.createPanorama( fileList, displayDialog );
+</pre></div>
+</div>
+<p>Merges multiple files into one, with user interaction required.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="makePicturePackage">
+<span class="sig-name descname"><span class="pre">makePicturePackage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inputFiles</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#makePicturePackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>DEPRECATED for Adobe Photoshop CS4.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">inputFiles<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">options<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PicturePackageOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="open">
+<span class="sig-name descname"><span class="pre">open</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">document</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">as</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asSmartObject</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Opens the specified document. Use the optional as parameter to specify the file format using the constants in OpenDocumentType; or, you can specify a file format together with its open options using these objects: <code class="xref py py-class docutils literal notranslate"><span class="pre">CameraRAWOpenOptions</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">DICOMOpenOptions</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">EPSOpenOptions</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">PDFOpenOptions</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">PhotoCDOpenOptions</span></code> <code class="xref py py-class docutils literal notranslate"><span class="pre">RawFormatOpenOptions</span></code>. Use the optional parameter asSmartObject (default: false) to create a smart object around the opened document. See the Application sample scripts for an example of using the File object in the open method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">document<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">as<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span> <span class="pre">or</span> <span class="pre">OpenDocumentType</span></code></p>
+</dd>
+<dt class="field-odd">asSmartObject<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="openDialog">
+<span class="sig-name descname"><span class="pre">openDialog</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openDialog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the Photoshop Open dialog box for the user to select files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">File</span></code> - an array of File objects for the files selected in the dialog</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="purge">
+<span class="sig-name descname"><span class="pre">purge</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#purge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Purges one or more caches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">target<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PurgeTarget</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="putCustomOptions">
+<span class="sig-name descname"><span class="pre">putCustomOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">customObject</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">persistent</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#putCustomOptions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves a customized settings object in the Photoshop registry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">key<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code>: the unique identifier for your custom settings</p>
+</dd>
+<dt class="field-even">customObject<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ActionDescriptor</span></code>: the object to save in the registry</p>
+</dd>
+<dt class="field-odd">persistent<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code>: indicates whether the object should persist once the script has finished</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#refresh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses the script while the application refreshes. Use to slow down execution and show the results to the user as the script runs. Use carefully; your script runs much more slowly when using this method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="refreshFonts">
+<span class="sig-name descname"><span class="pre">refreshFonts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#refreshFonts" title="Permalink to this definition">¶</a></dt>
+<dd><p>Force the font list to get updated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="runMenuItem">
+<span class="sig-name descname"><span class="pre">runMenuItem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">menuID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#runMenuItem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a menu item given the menu ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">menuID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="showColorPicker">
+<span class="sig-name descname"><span class="pre">showColorPicker</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#showColorPicker" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code> - false if dialog is cancelled, true otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="stringIDToTypeID">
+<span class="sig-name descname"><span class="pre">stringIDToTypeID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stringID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stringIDToTypeID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from a string ID to a runtime ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">stringID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="togglePalettes">
+<span class="sig-name descname"><span class="pre">togglePalettes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#togglePalettes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggle palette visibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toolSupportsBrushes">
+<span class="sig-name descname"><span class="pre">toolSupportsBrushes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toolSupportsBrushes" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">tool<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code> - true if the specified tool supports brushes, false otherwise</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="toolSupportsBrushPresets">
+<span class="sig-name descname"><span class="pre">toolSupportsBrushPresets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#toolSupportsBrushPresets" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">tool<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code> - true if the brush supports presets</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="typeIDToCharID">
+<span class="sig-name descname"><span class="pre">typeIDToCharID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typeID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#typeIDToCharID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from a runtime ID to a character ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">typeID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="typeIDToStringID">
+<span class="sig-name descname"><span class="pre">typeIDToStringID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">typeID</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#typeIDToStringID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts from a runtime ID to a string ID.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">typeID<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="updateProgress">
+<span class="sig-name descname"><span class="pre">updateProgress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">done</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">total</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#updateProgress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the progress bar started by doProgress method. This method should be used for manual non-task based progress updating.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">done<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code>: the number of tasks completed</p>
+</dd>
+<dt class="field-even">total<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code>: the total number of tasks</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code> - false on cancel</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Application</a><ul>
+<li><a class="reference internal" href="#properties">Properties</a></li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../ActionReference/intro.html"
+                          title="previous chapter">ActionReference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../ArtLayer/intro.html"
+                          title="next chapter">ArtLayer</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/JavaScript Object Reference/Sorted by name/Application/intro.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../ArtLayer/intro.html" title="ArtLayer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../ActionReference/intro.html" title="ActionReference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">Photoshop js reference  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >JavaScript Object Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >Object Alphabetical Index</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Application</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, TsXor.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>
