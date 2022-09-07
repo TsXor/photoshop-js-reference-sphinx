@@ -1,6 +1,6 @@
 from xlformat_func import *
 
-perm_matcher = re.compile(r'Read-(only)?(write)?\. ')
+perm_matcher = re.compile(r'Read-(only)?(write)?\.( )?')
 
 def getperm(x):
     target = x[2]

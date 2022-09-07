@@ -24,16 +24,16 @@
 [Y]        DCS1_SaveOptions
 [Y]        DCS2_SaveOptions
 [Y]        DICOMOpenOptions
-[ ]        Document
-[ ]        DocumentPrintSettings
-[ ]        DocumentInfo
-[ ]        Documents
-[ ]        EPSOpenOptions
-[ ]        EPSSaveOptions
-[ ]        ExportOptionsIllustrator
-[ ]        ExportOptionsSaveForWeb
-[ ]        File
-[ ]        Folder
+[Y]        Document
+[Y]        DocumentPrintSettings
+[Y]        DocumentInfo
+[Y]        Documents
+[Y]        EPSOpenOptions
+[Y]        EPSSaveOptions
+[Y]        ExportOptionsIllustrator
+[Y]        ExportOptionsSaveForWeb
+[Y]        File
+[Y]        Folder
 [ ]        GalleryBannerOptions
 [ ]        GalleryCustomColorOptions
 [ ]        GalleryImagesOptions

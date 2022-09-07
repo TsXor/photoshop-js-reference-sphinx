@@ -31,3 +31,12 @@ The Photoshop objects (the JavaScript type library for Adobe® Photoshop®) are 
    DCS2_SaveOptions/intro.rst 
    DICOMOpenOptions/intro.rst 
    Document/intro.rst 
+   DocumentPrintSettings/intro.rst 
+   DocumentInfo/intro.rst 
+   Documents/intro.rst 
+   EPSOpenOptions/intro.rst 
+   EPSSaveOptions/intro.rst 
+   ExportOptionsIllustrator/intro.rst 
+   ExportOptionsSaveForWeb/intro.rst 
+   File/intro.rst 
+   Folder/intro.rst 
