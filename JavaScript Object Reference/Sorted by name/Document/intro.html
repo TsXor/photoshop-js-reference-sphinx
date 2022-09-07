@@ -16,6 +16,7 @@
     <script src="../../../_static/doctools.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="DocumentPrintSettings" href="../DocumentPrintSettings/intro.html" />
     <link rel="prev" title="DICOMOpenOptions" href="../DICOMOpenOptions/intro.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -24,6 +25,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../DocumentPrintSettings/intro.html" title="DocumentPrintSettings"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="../DICOMOpenOptions/intro.html" title="DICOMOpenOptions"
              accesskey="P">previous</a> |</li>
@@ -54,9 +58,1096 @@
 </ul>
 <section id="properties">
 <h2>Properties<a class="headerlink" href="#properties" title="Permalink to this heading">¶</a></h2>
+<dl class="py property">
+<dt class="sig sig-object py" id="activeChannels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeChannels</span></span><a class="headerlink" href="#activeChannels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected channels.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">Channel</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="activeHistoryBrushSource">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeHistoryBrushSource</span></span><a class="headerlink" href="#activeHistoryBrushSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>The history state to use with the history brush.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Guide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="activeHistoryState">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeHistoryState</span></span><a class="headerlink" href="#activeHistoryState" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected HistoryState object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Guide</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="activeLayer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">activeLayer</span></span><a class="headerlink" href="#activeLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected layer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span> <span class="pre">or</span> <span class="pre">LayerSet</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="artLayers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">artLayers</span></span><a class="headerlink" href="#artLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The art layers collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayers</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="backgroundLayer">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">backgroundLayer</span></span><a class="headerlink" href="#backgroundLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>The background layer of the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="bitsPerChannel">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bitsPerChannel</span></span><a class="headerlink" href="#bitsPerChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of bits per channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BitsPerChannelType</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="channels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">channels</span></span><a class="headerlink" href="#channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The channels collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Channels</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cloudDocument">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cloudDocument</span></span><a class="headerlink" href="#cloudDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>This document is in the cloud.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="cloudWorkAreaDirectory">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">cloudWorkAreaDirectory</span></span><a class="headerlink" href="#cloudWorkAreaDirectory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Local directory for this cloud document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">alias</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="colorProfileName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colorProfileName</span></span><a class="headerlink" href="#colorProfileName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the color profile. Valid only when colorProfileType = ColorProfile.CUSTOM or WORKING.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="colorProfileType">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colorProfileType</span></span><a class="headerlink" href="#colorProfileType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the document uses the working color profile, a custom profile, or no profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ColorProfileType</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="colorSamplers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">colorSamplers</span></span><a class="headerlink" href="#colorSamplers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current color samplers associated with this document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ColorSamplers</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="componentChannels">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">componentChannels</span></span><a class="headerlink" href="#componentChannels" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color channels that make up the document; for instance, the Red, Green, and Blue channels for an RGB document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">Channel</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="countItems">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">countItems</span></span><a class="headerlink" href="#countItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current count items. Note: For additional information about count items, see Adobe Photoshop help on the Count Tool.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CountItems</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="fullName">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fullName</span></span><a class="headerlink" href="#fullName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The full path name of the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="guides">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">guides</span></span><a class="headerlink" href="#guides" title="Permalink to this definition">¶</a></dt>
+<dd><p>The guides collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Guides</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#height" title="Permalink to this definition">¶</a></dt>
+<dd><p>The height of the document (unit value).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="histogram">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">histogram</span></span><a class="headerlink" href="#histogram" title="Permalink to this definition">¶</a></dt>
+<dd><p>A histogram showing the number of pixels at each color intensity level for the composite channel. The array c ontains 256 members. Valid only when mode = DocumentMode.RGB, CMYK; or INDEXEDCOLOR.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="historyStates">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">historyStates</span></span><a class="headerlink" href="#historyStates" title="Permalink to this definition">¶</a></dt>
+<dd><p>The history states collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">HistoryStates</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="info">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Metadata about the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentInfo</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="layerComps">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerComps</span></span><a class="headerlink" href="#layerComps" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layer compositions collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LayerComps</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="layers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layers</span></span><a class="headerlink" href="#layers" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layers collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Layers</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="layerSets">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerSets</span></span><a class="headerlink" href="#layerSets" title="Permalink to this definition">¶</a></dt>
+<dd><p>The layer set collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">LayerSets</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="managed">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">managed</span></span><a class="headerlink" href="#managed" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the document a is workgroup document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="measurementScale">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measurementScale</span></span><a class="headerlink" href="#measurementScale" title="Permalink to this definition">¶</a></dt>
+<dd><p>The measurement scale for the document. Note: The measurement scale feature is available in the Extended version only.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementScale</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="mode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mode</span></span><a class="headerlink" href="#mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>The color profile.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentMode</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The document’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="parent">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent</span></span><a class="headerlink" href="#parent" title="Permalink to this definition">¶</a></dt>
+<dd><p>The application object that contains this document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Application</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path</span></span><a class="headerlink" href="#path" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pathItems">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pathItems</span></span><a class="headerlink" href="#pathItems" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path items collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">PathItems</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pixelAspectRatio">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pixelAspectRatio</span></span><a class="headerlink" href="#pixelAspectRatio" title="Permalink to this definition">¶</a></dt>
+<dd><p>The (custom) pixel aspect ratio to use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span> <span class="pre">[0.100..10.000]</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="printSettings">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">printSettings</span></span><a class="headerlink" href="#printSettings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The print settings for the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DocumentPrintSettin</span> <span class="pre">gs</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="quickMaskMode">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quickMaskMode</span></span><a class="headerlink" href="#quickMaskMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the document is in Quick Mask mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-write.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="resolution">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">resolution</span></span><a class="headerlink" href="#resolution" title="Permalink to this definition">¶</a></dt>
+<dd><p>The document’s resolution (in pixels per inch).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="saved">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">saved</span></span><a class="headerlink" href="#saved" title="Permalink to this definition">¶</a></dt>
+<dd><p>True if the document has been saved since the last change.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="selection">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selection</span></span><a class="headerlink" href="#selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>The selected area of the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Selection</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="typename">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">typename</span></span><a class="headerlink" href="#typename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The class name of the Document object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#width" title="Permalink to this definition">¶</a></dt>
+<dd><p>The width of the document (unit value).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="xmpMetadata">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xmpMetadata</span></span><a class="headerlink" href="#xmpMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>XMP metadata for the document. Camera RAW settings for the image are stored here for example.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Permission<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Read-only.</p>
+</dd>
+<dt class="field-even">Type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#xmpMetadata" title="xmpMetadata"><code class="xref py py-class docutils literal notranslate"><span class="pre">xmpMetadata</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 <section id="methods">
 <h2>Methods<a class="headerlink" href="#methods" title="Permalink to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="autoCount">
+<span class="sig-name descname"><span class="pre">autoCount</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#autoCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>Counts the number of objects in a document. Available in the Extended Version only. Creates a CountItem object for each object counted. For additional information about how to set up objects to count, see the Count Tool in the Adobe Photoshop Help</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">channel<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Channel</span></code></p>
+</dd>
+<dt class="field-even">threshold<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="changeMode">
+<span class="sig-name descname"><span class="pre">changeMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destinationMode</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#changeMode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the color profile of the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">destinationMode<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ChangeMode</span></code></p>
+</dd>
+<dt class="field-even">options<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">BitmapConversionOptions</span> <span class="pre">or</span> <span class="pre">IndexedConversionOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">saving</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Closes the document. If any changes have been made, the script presents an alert with three options: save, do not save, prompt to save. The optional parameter specifies a selection in the alert box (default: SaveOptionsType. PROMPTTOSAVECHANGES).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">saving<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SaveOptions</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="convertProfile">
+<span class="sig-name descname"><span class="pre">convertProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destinationProfile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intent</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">blackPointCompensation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dither</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#convertProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the color profile. The destinationProfile parameter must be either a string that names the color mode or Working RGB, Working CMYK, Working Gray, Lab Color (meaning one of the working color spaces or Lab color).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">destinationProfile<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-even">intent<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Intent</span></code></p>
+</dd>
+<dt class="field-odd">blackPointCompensation<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-even">dither<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="crop">
+<span class="sig-name descname"><span class="pre">crop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#crop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Crops the document. The bounds parameter is an array of four coordinates for the region remaining after cropping, [left, top, right, bottom].</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">bounds<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">4</span> <span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">angle<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">height<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="duplicate">
+<span class="sig-name descname"><span class="pre">duplicate</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mergeLayersOnly</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#duplicate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a duplicate of the document object. The optional parameter name provides the name for the duplicated document. The optional parameter mergeLayersOnly indicates whether to only duplicate merged layers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">name<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-even">mergeLayersOnly<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Document</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="exportDocument">
+<span class="sig-name descname"><span class="pre">exportDocument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">exportIn</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">exportAs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#exportDocument" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports the paths in the document to an Illustrator file, or exports the document to a file with Web or device viewing optimizations. This is equivalent to choosing File &gt; Export &gt; Paths To Illustrator, or File &gt; Save For Web and Devices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">exportIn<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">exportAs<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ExportType</span></code></p>
+</dd>
+<dt class="field-odd">options<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ExportOptionsIllustrator</span> <span class="pre">or</span> <span class="pre">ExportOptionsSaveForWeb</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flatten">
+<span class="sig-name descname"><span class="pre">flatten</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flatten" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flattens all layers in the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="flipCanvas">
+<span class="sig-name descname"><span class="pre">flipCanvas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#flipCanvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flips the image within the canvas in the specified direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">direction<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Direction</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="importAnnotations">
+<span class="sig-name descname"><span class="pre">importAnnotations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#importAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports annotations into the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">file<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mergeVisibleLayers">
+<span class="sig-name descname"><span class="pre">mergeVisibleLayers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mergeVisibleLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flattens all visible layers in the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="paste">
+<span class="sig-name descname"><span class="pre">paste</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">intoSelection</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#paste" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pastes the contents of the clipboard into the document. If the optional argument is set to true and a selection is active, the contents are pasted into the selection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">intoSelection<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ArtLayer</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">sourceSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">printSpace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">intent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blackPointCompensation</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#print" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prints the document. printSpace specifies the color space for the printer. Valid values are nothing (that is, the same as the source); or Working RGB, Working CMYK, Working Gray, Lab Color (meaning one of the working color spaces or Lab color); or a string specifying a specific colorspace (default is same as source).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">sourceSpace<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">SourceSpaceType</span></code></p>
+</dd>
+<dt class="field-even">printSpace<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-odd">intent<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Intent</span></code></p>
+</dd>
+<dt class="field-even">blackPointCompensation<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="printOneCopy">
+<span class="sig-name descname"><span class="pre">printOneCopy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#printOneCopy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print one copy of the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rasterizeAllLayers">
+<span class="sig-name descname"><span class="pre">rasterizeAllLayers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#rasterizeAllLayers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rasterizes all layers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="recordMeasurements">
+<span class="sig-name descname"><span class="pre">recordMeasurements</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataPoints</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#recordMeasurements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record measurements of document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">source<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">MeasurementSource</span></code></p>
+</dd>
+<dt class="field-even">dataPoints<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="resizeCanvas">
+<span class="sig-name descname"><span class="pre">resizeCanvas</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anchor</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#resizeCanvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the size of the canvas to display more or less of the image but does not change the image size. See resizeImage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">height<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-odd">anchor<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">AnchorPosition</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="resizeImage">
+<span class="sig-name descname"><span class="pre">resizeImage</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resolution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resampleMethod</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">amount</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#resizeImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the size of the image. The amount parameter controls the amount of noise value when using preserve details (Range: 0 - 100).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-even">height<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">UnitValue</span></code></p>
+</dd>
+<dt class="field-odd">resolution<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+<dt class="field-even">resampleMethod<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ResampleMethod</span></code></p>
+</dd>
+<dt class="field-odd">amount<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="revealAll">
+<span class="sig-name descname"><span class="pre">revealAll</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#revealAll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Expands the document to show clipped sections.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="rotateCanvas">
+<span class="sig-name descname"><span class="pre">rotateCanvas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#rotateCanvas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Rotates the canvas (including the image) in clockwise direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">angle<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the document.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="saveAs">
+<span class="sig-name descname"><span class="pre">saveAs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">saveIn</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">asCopy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extensionType</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#saveAs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the document in a specific format. Specify the save options appropriate to the format by passing one of these objects: BMPSaveOptions DCS1_SaveOptions DCS2_SaveOptions EPSSaveOptions GIFSaveOptions JPEGSaveOptions PDFSaveOptions PhotoshopSaveOptions PICTFileSaveOptions PICTResourceSaveOptions PixarSaveOptions PNGSaveOptions RawSaveOptions SGIRGBSaveOptions TargaSaveOptions TiffSaveOptions</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">saveIn<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">File</span></code></p>
+</dd>
+<dt class="field-even">options<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span> <span class="pre">(see</span> <span class="pre">description)</span></code></p>
+</dd>
+<dt class="field-odd">asCopy<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-even">extensionType<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Extension</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="splitChannels">
+<span class="sig-name descname"><span class="pre">splitChannels</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#splitChannels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Splits the document channels into separate images.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><cite>null</cite></p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span> <span class="pre">of</span> <span class="pre">Document</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="suspendHistory">
+<span class="sig-name descname"><span class="pre">suspendHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">historyString</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">javaScriptString</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#suspendHistory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a single entry in history states for the entire script provided by javaScriptString. Allows a single undo for all actions taken in the script. The historyString parameter provides the string to use for the history state. The javaScriptString parameter provides a string of JavaScript code to excute while history is suspended.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">historyString<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+<dt class="field-even">javaScriptString<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trap">
+<span class="sig-name descname"><span class="pre">trap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#trap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies trapping to a CMYK document. Valid only when docRef.mode = DocumentMode.CMYK.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">width<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">number</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="trim">
+<span class="sig-name descname"><span class="pre">trim</span></span><span class="sig-paren">(</span><span class="optional">[</span><em class="sig-param"><span class="n"><span class="pre">type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">left</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bottom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">right</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#trim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trims the transparent area around the image on the specified sides of the canvas. Default is true for all Boolean parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="field-list simple">
+<dt class="field-odd">type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">TrimType</span></code></p>
+</dd>
+<dt class="field-even">top<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-odd">left<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-even">bottom<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+<dt class="field-odd">right<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">boolean</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><cite>undefined</cite></p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 </section>
 
@@ -82,6 +1173,11 @@
     <h4>Previous topic</h4>
     <p class="topless"><a href="../DICOMOpenOptions/intro.html"
                           title="previous chapter">DICOMOpenOptions</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../DocumentPrintSettings/intro.html"
+                          title="next chapter">DocumentPrintSettings</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -110,6 +1206,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../DocumentPrintSettings/intro.html" title="DocumentPrintSettings"
+             >next</a> |</li>
         <li class="right" >
           <a href="../DICOMOpenOptions/intro.html" title="DICOMOpenOptions"
              >previous</a> |</li>
